@@ -112,6 +112,7 @@ const FloatingImage = () => {
             </p> */}
 
             <Button
+              link="https://maps.app.goo.gl/9nZRZWoZEKBZESRX7"
               id="realm-btn"
               title="Discover the avenue"
               containerClass="mt-5"
