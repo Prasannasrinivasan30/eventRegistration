@@ -115,10 +115,10 @@ const Features = () => (
           src="videos/feature-1.mp4"
           title={
             <>
-              radia<b>n</b>t
+              <b>Technophile Testers</b>
             </>
           }
-          description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
+          // description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
           isComingSoon
         />
       </BentoTilt>
@@ -129,10 +129,10 @@ const Features = () => (
             src="videos/feature-2.mp4"
             title={
               <>
-                zig<b>m</b>a
+                Pap<b>e</b>r<br/><b>Pre</b>sentation
               </>
             }
-            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+            // description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
             isComingSoon
           />
         </BentoTilt>
@@ -142,10 +142,10 @@ const Features = () => (
             src="videos/feature-3.mp4"
             title={
               <>
-                n<b>e</b>xus
+                <b>Vis-talk</b>
               </>
             }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+            // description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
             isComingSoon
           />
         </BentoTilt>
@@ -155,10 +155,10 @@ const Features = () => (
             src="videos/feature-4.mp4"
             title={
               <>
-                az<b>u</b>l
+                <b>Bob The <br/>Builder</b>
               </>
             }
-            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             isComingSoon
           />
         </BentoTilt>
@@ -174,13 +174,23 @@ const Features = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-          <video
+          <BentoCard
+            // src="videos/feature-5.mp4"
+            title={
+              <>
+                <b>IOBOS</b>
+              </>
+            }
+            // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            isComingSoon
+          />
+          {/* <video
             src="videos/feature-5.mp4"
             loop
             muted
             autoPlay
             className="size-full object-cover object-center"
-          />
+          /> */}
         </BentoTilt>
       </div>
     </div>
