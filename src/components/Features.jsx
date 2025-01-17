@@ -99,7 +99,12 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 };
 
 const Features = () => (
-  <section className="bg-black pb-52">
+  <section className="bg-black pb-52" id="events">
+    <div className="text-white text-center  font-robert-medium text-4xl pt-10">
+        <h1>
+           Mission and vision
+        </h1>
+      </div>
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         <p className="font-circular-web text-lg text-blue-50">
@@ -109,7 +114,7 @@ const Features = () => (
           Discover the symposium, where a diverse range of products come together to create a unique and interconnected experience in your world.
         </p>
       </div>
-
+      
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
           src="videos/feature-1.mp4"
@@ -162,17 +167,6 @@ const Features = () => (
             isComingSoon
           />
         </BentoTilt>
-
-        <BentoTilt className="bento-tilt_2">
-          <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
-            <h1 className="bento-title special-font max-w-64 text-black">
-              S<b>U</b>pr<b>is</b>e E<b>v</b>ents co<b>m</b>ing s<b>o</b>on.
-            </h1>
-
-            <TiLocationArrow className="m-5 scale-[5] self-end" />
-          </div>
-        </BentoTilt>
-
         <BentoTilt className="bento-tilt_2">
           <BentoCard
             // src="videos/feature-5.mp4"
@@ -192,6 +186,17 @@ const Features = () => (
             className="size-full object-cover object-center"
           /> */}
         </BentoTilt>
+        <BentoTilt className="bento-tilt_2">
+          <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
+            <h1 className="bento-title special-font max-w-64 text-black">
+              S<b>U</b>pr<b>is</b>e E<b>v</b>ents co<b>m</b>ing s<b>o</b>on.
+            </h1>
+
+            <TiLocationArrow className="m-5 scale-[5] self-end" />
+          </div>
+        </BentoTilt>
+
+        
       </div>
     </div>
   </section>

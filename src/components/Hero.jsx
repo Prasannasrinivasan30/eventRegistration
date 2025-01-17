@@ -141,31 +141,38 @@ const Hero = () => {
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          H<b>O</b>NKEN
+          <b>2025</b>
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              RMKEC
+              H<b>O</b>NI<b>K</b>EN
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Welcoming you to <br />National Level Symposium 2025
+            <p className="mb-5 max-w-64 font-robert-regular text-xl text-blue-100 ">
+              Welcoming you to <br />National Level Symposium 
             </p>
-
+            <div className="flex gap-2">
             <Button
               id="watch-trailer"
-              title="Register"
+              title="Register now"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"
             />
+            <Button
+              id="watch-trailer"
+              title="Brochure"
+              leftIcon={<TiLocationArrow />}
+              containerClass="bg-yellow-300 flex-center gap-1 px-[2.4rem]"
+            />
+            </div>
           </div>
         </div>
       </div>
 
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        H<b>O</b>NKEN
+        2025
       </h1>
     </div>
   );
