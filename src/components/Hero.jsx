@@ -161,6 +161,7 @@ const Hero = () => {
               containerClass="bg-yellow-300 flex-center gap-1"
             />
             <Button
+              link="misc/PDF.pdf"
               id="watch-trailer"
               title="Brochure"
               leftIcon={<TiLocationArrow />}
