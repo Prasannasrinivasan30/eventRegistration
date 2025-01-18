@@ -100,7 +100,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
 const Features = () => (
   <section className="bg-black pb-52" id="events">
-    <div className="text-white text-center  font-robert-medium text-4xl pt-10">
+    <div className="text-white text-center  font-robert-medium text-4xl pt-40">
         <h1>
            Mission and vision
         </h1>
@@ -120,7 +120,7 @@ const Features = () => (
           src="videos/feature-1.mp4"
           title={
             <>
-              <b>Technophile Testers</b>
+              <b>Tech Thesis<br />Paper presentation</b> 
             </>
           }
           // description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
@@ -134,7 +134,9 @@ const Features = () => (
             src="videos/feature-2.mp4"
             title={
               <>
-                Pap<b>e</b>r<br/><b>Pre</b>sentation
+                Id<b>e</b>ath<b>o</b>n 
+                <br />
+                Project Presentation
               </>
             }
             // description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
@@ -147,7 +149,8 @@ const Features = () => (
             src="videos/feature-3.mp4"
             title={
               <>
-                <b>Vis-talk</b>
+                <b> Tech Trek </b>
+                <p className="text-lg pl-1.5">Quiz Event</p>
               </>
             }
             // description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
@@ -160,7 +163,9 @@ const Features = () => (
             src="videos/feature-4.mp4"
             title={
               <>
-                <b>Bob The <br/>Builder</b>
+                Robo Trail<br/> Blaze <br></br>
+                <p className="text-xl">line following robot</p>
+                <p className="text-xl">Event</p>
               </>
             }
             // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
