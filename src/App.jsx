@@ -46,7 +46,7 @@ function App() {
           {languages[currentLangIndex]} 
         </p>
         <p>
-          {"<3"}
+          ...
         </p>
       </section>
     <main
