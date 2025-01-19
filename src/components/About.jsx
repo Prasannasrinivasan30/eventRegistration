@@ -7,6 +7,24 @@ import AnimatedTitle from "./AnimatedTitle";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  // useGSAP(() => {
+  //   const moveAnimation = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: "#clip",
+  //       start: "center center",
+  //       end: "+=500 center",
+  //       scrub: 0.5,
+  //       pin: true,
+  //       pinSpacing: true,
+  //     },
+  //   });
+
+  //   moveAnimation.to(".mask-clip-path", {
+  //     width: "100vw",
+  //     height: "100vh",
+  //     borderRadius: 0,
+  //   });
+  // });
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
