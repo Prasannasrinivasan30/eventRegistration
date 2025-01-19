@@ -126,9 +126,9 @@ const Features = () => {
 
   return (
     <section className="bg-black pb-52" id="events">
-      <div className="text-white text-center font-robert-medium text-4xl pt-40 grid grid-cols-2 gap-10 mx-10">
+      <div className="text-white text-center font-robert-medium text-4xl pt-40 lg:flex gap-10 mx-10">
         <div>
-          <h1 ref={(el) => (textRefs.current[0] = el)}>Mission</h1>
+          <h1 ref={(el) => (textRefs.current[0] = el)}>MISSION</h1>
           <ul
             ref={(el) => (textRefs.current[1] = el)}
             className="text-justify text-xl list-disc pl-6"
@@ -143,6 +143,10 @@ const Features = () => {
               To modernize the laboratories on par with industry standards and to collaborate with them to improve the skill set of the students for providing innovative solutions to the industry.
             </li>
           </ul>
+        </div>
+        <img src="img/RMKlogo.png" alt="" className="hidden lg:block" />
+        <div className=" lg:hidden flex items-center justify-center">
+          <img src="img/RMKlogo.png" alt=""  />
         </div>
         <div>
           <h1 ref={(el) => (textRefs.current[2] = el)}>VISION</h1>
@@ -227,25 +231,25 @@ const Features = () => {
             isComingSoon
           />
         </BentoTilt>
-        <BentoTilt className="bento-tilt_2">
+        {/* <BentoTilt className="bento-tilt_2">
           <BentoCard
-            // src="videos/feature-5.mp4"
+            src="videos/feature-5.mp4"
             title={
               <>
                 <b>IOBOS</b>
               </>
             }
-            // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             isComingSoon
           />
-          {/* <video
+          <video
             src="videos/feature-5.mp4"
             loop
             muted
             autoPlay
             className="size-full object-cover object-center"
-          /> */}
-        </BentoTilt>
+          />
+        </BentoTilt> */}
         <BentoTilt className="bento-tilt_2">
           <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
             <h1 className="bento-title special-font max-w-64 text-black">

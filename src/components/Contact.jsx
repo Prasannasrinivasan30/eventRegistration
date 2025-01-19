@@ -34,7 +34,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          <p className="mb-10 font-general text-[10px] uppercase">
+          <p className="mb-10 font-general text-[1.2rem] uppercase">
             For Queries?
           </p>
 
@@ -46,6 +46,7 @@ const Contact = () => {
           <Button title="contact us" containerClass="mt-10 cursor-pointer" />
         </div>
       </div>
+      {/* <a className="text-right font-web-circular mr-2" href="https://www.linkedin.com/in/kkube">Developed by <span className="text-blue-500 "> Kishore Kumar K</span></a> */}
     </div>
   );
 };

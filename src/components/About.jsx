@@ -48,7 +48,7 @@ const About = () => {
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <p className="font-circular-web text-xl uppercase md:text-[1.2rem] text-gray-900 text-center">
-          <b>Welcome to R.M.K Engineering <br className="inline sm:hidden"/>College</b>  
+          <b>Welcome to R.M.K. Engineering <br className="inline sm:hidden"/>College</b>  
         </p>
 
         <AnimatedTitle

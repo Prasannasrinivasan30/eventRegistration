@@ -151,7 +151,7 @@ const Hero = () => {
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-xl text-blue-100 ">
-              Welcoming you to <br />National Level Symposium 
+              Welcoming you to <br />A National Level Symposium 
             </p>
             <div className="flex gap-2">
             <Button

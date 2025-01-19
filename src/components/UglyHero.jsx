@@ -82,8 +82,8 @@ const UglyHero = () => {
               H<b>O</b>NE<b>K</b>EN
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-xl text-blue-100 ">
-              Welcoming you to <br />National Level Symposium 
+            <p className="mb-5 max-w-72 font-robert-regular text-xl text-blue-100 ">
+              Welcoming you to <br />A National Level Symposium 
             </p>
             <div className="flex gap-2">
               <Button
