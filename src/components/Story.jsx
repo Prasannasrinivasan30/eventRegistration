@@ -1,9 +1,9 @@
 import gsap from "gsap";
 import { useRef } from "react";
 
-import Button from "./Button";
+// import Button from "./Button";
 import AnimatedTitle from "./AnimatedTitle";
-
+import {TiLocationArrow} from 'react-icons/ti'
 const FloatingImage = () => {
   const frameRef = useRef(null);
 
@@ -116,6 +116,7 @@ const FloatingImage = () => {
               id="realm-btn"
               title="Discover the avenue"
               containerClass="mt-5"
+              leftIcon={<TiLocationArrow />}
             />
           </div>
         </div>
@@ -125,3 +126,33 @@ const FloatingImage = () => {
 };
 
 export default FloatingImage;
+
+import clsx from "clsx";
+
+const Button = ({ id, title, rightIcon, leftIcon, containerClass,link }) => {
+  return (
+    <a
+      href={link}
+      id={id}
+      className={clsx(
+        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black flex",
+        containerClass
+      )}
+    >
+      {leftIcon}
+
+      <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
+        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-170%] group-hover:skew-y-12">
+          {title}
+        </div>
+        <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+          {title}
+        </div>
+      </span>
+
+      {rightIcon}
+    </a>
+  );
+};
+
+// export default Button;
