@@ -125,7 +125,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="bg-black pb-52" id="events">
+    <section className="bg-black pb-52" >
       <div className="text-white text-center font-robert-medium text-4xl pt-40 lg:flex gap-10 mx-10">
         <div>
           <h1 ref={(el) => (textRefs.current[0] = el)}>MISSION</h1>
@@ -173,8 +173,8 @@ const Features = () => {
           Discover the symposium, where a diverse range of products come together to create a unique and interconnected experience in your world.
         </p>
       </div>
-      
-      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
+      <br id="events"/>
+      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]" >
         <BentoCard
           src="videos/feature-1.mp4"
           title={
