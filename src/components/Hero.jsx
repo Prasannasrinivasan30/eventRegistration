@@ -64,7 +64,7 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.set("#video-frame", {
-      clipPath: "polygon(14% 0, 72% 0, 88% 80%, 0 45%)",
+      clipPath: "polygon(14% 0, 72% 0, 88% 60%, 0 45%)",
       borderRadius: "0% 0% 40% 10%",
     });
     gsap.from("#video-frame", {
@@ -74,7 +74,7 @@ const Hero = () => {
       scrollTrigger: {
         trigger: "#video-frame",
         start: "center center",
-        end: "bottom",
+        end: "bottom ",
         scrub: true,
       },
     });
@@ -101,7 +101,7 @@ const Hero = () => {
       >
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
-            {/* <VideoPreview>
+            <VideoPreview>
               <div
                 onClick={handleMiniVdClick}
                 className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
@@ -116,7 +116,7 @@ const Hero = () => {
                   onLoadedData={handleVideoLoad}
                 />
               </div>
-            </VideoPreview> */}
+            </VideoPreview>
           </div>
 
           <video
@@ -147,11 +147,11 @@ const Hero = () => {
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              H<b>O</b>NI<b>K</b>EN
+              H<b>O</b>NE<b>K</b>EN
             </h1>
 
-            <p className="mb-5 max-w-72 font-robert-regular text-xl text-blue-100 ">
-              Welcoming you to <br />A National Level Symposium 
+            <p className="mb-5 max-w-64 font-robert-regular text-xl text-blue-100 ">
+              Welcoming you to <br />National Level Symposium 
             </p>
             <div className="flex gap-2">
             <Button

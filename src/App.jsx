@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Hero from "./components/Hero";
+import UglyHero from "./components/UglyHero";
 import NavBar from "./components/Navbar";
 import Features from "./components/Features";
 import Story from "./components/Story";
@@ -18,7 +18,7 @@ function App() {
     onClick={toggleHover}
     >
       <NavBar hover={hover} setHover={setHover}/>
-      <Hero />
+      <UglyHero />
       <About />
       <Features />
       <Story />

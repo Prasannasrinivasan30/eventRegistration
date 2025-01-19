@@ -1,5 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
@@ -81,7 +85,6 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
             onMouseLeave={handleMouseLeave}
             className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black px-5 py-2 text-xs uppercase text-white/20"
           >
-            {/* Radial gradient hover effect */}
             <div
               className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
               style={{
@@ -98,14 +101,66 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
   );
 };
 
-const Features = () => (
-  <section className="bg-black pb-52" id="events">
-    <div className="text-white text-center  font-robert-medium text-4xl pt-40">
-        <h1>
-           Mission and vision
-        </h1>
+const Features = () => {
+  const textRefs = useRef([]);
+
+  useEffect(() => {
+    textRefs.current.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
+
+  return (
+    <section className="bg-black pb-52" id="events">
+      <div className="text-white text-center font-robert-medium text-4xl pt-40 grid grid-cols-2 gap-10 mx-10">
+        <div>
+          <h1 ref={(el) => (textRefs.current[0] = el)}>Mission</h1>
+          <ul
+            ref={(el) => (textRefs.current[1] = el)}
+            className="text-justify text-xl list-disc pl-6"
+          >
+            <li>
+              To provide the needed resources and infrastructure and to establish a conducive ambience for the teaching-learning and research processes and to meet with the technological developments.
+            </li>
+            <li>
+              To create high quality professionals and entrepreneurs in the field of Electronics and Communication Engineering with the right attitude to serve the society with ethical values.
+            </li>
+            <li>
+              To modernize the laboratories on par with industry standards and to collaborate with them to improve the skill set of the students for providing innovative solutions to the industry.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h1 ref={(el) => (textRefs.current[2] = el)}>VISION</h1>
+          <ul
+            ref={(el) => (textRefs.current[3] = el)}
+            className="text-justify text-xl list-disc pl-6"
+          >
+            <li>
+              To be one of the most sought after Centres of Excellence in the field of Electronics and Communication Engineering by providing high quality education.
+            </li>
+            <li>
+              To mould the students to compete internationally and to become excellent researchers and innovators who can provide solution to societal issues.
+            </li>
+          </ul>
+        </div>
       </div>
-    <div className="container mx-auto px-3 md:px-10">
+
+      <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         <p className="font-circular-web text-lg text-blue-50">
             Following for the exciting events!
@@ -204,7 +259,8 @@ const Features = () => (
         
       </div>
     </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Features;

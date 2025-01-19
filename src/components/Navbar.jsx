@@ -81,6 +81,7 @@ const NavBar = ({hover}) => {
             <img src="/img/logo.png" alt="logo" className="w-10" />
 
             <Button
+            link="https://maps.app.goo.gl/9nZRZWoZEKBZESRX7"
               id="product-button"
               title="Avenue"
               rightIcon={<TiLocationArrow />}
