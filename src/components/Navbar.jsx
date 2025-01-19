@@ -8,11 +8,18 @@ import Button from "./Button";
 
 const navItems = ["Main","Events","Contact"];
 
-const NavBar = () => {
+const NavBar = ({hover}) => {
   // State for toggling audio and visual indicator
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying]=useState(false);
+  useEffect(()=>{
+    if(hover){
+      setIsAudioPlaying(true)
+    }
+  },[hover])
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
-
+  useEffect(()=>{
+    setIsIndicatorActive(isAudioPlaying)
+  },[isAudioPlaying])
   // Refs for audio and navigation container
   const audioElementRef = useRef(null);
   const navContainerRef = useRef(null);
