@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from "react";
 import About from "./components/About";
 import UglyHero from "./components/UglyHero";
@@ -8,67 +10,104 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
-  const [hover, setHover] = useState(false);
-  const [currentLangIndex, setCurrentLangIndex] = useState(0);
-  const [showAnimation, setShowAnimation] = useState(false);
   const languages = [
     'Hello', 'Hola', 'Bonjour', 'Hallo', 'Ciao', '你好', 'こんにちは', '안녕하세요',
     'Привет', 'Olá', 'سلام', 'Habari', 'שָׁלוֹם',
     'မင်္ဂလာပါ', 'Xin chào', 'Aloha', 'नमस्ते', 'こんにちは', 'வணக்கம்',
   ];
 
-  function toggleHover() {
-    setHover(true);
-  }
+  const [currentLangIndex, setCurrentLangIndex] = useState(0);
+  const [showAnimation, setShowAnimation] = useState(false);
+  // const [borderRadius, setBorderRadius] = useState("0% 0%");
 
+  // Custom Cursor Logic
+  // useEffect(() => {
+  //   const cursorDot = document.querySelector(".cursor-dot");
+  //   const cursorOutline = document.querySelector(".cursor-outline");
+
+  //   const handleMouseMove = (e) => {
+  //     const posX = e.clientX;
+  //     const posY = e.clientY;
+
+  //     if (cursorDot instanceof HTMLElement && cursorOutline instanceof HTMLElement) {
+  //       cursorDot.style.left = `${posX}px`;
+  //       cursorDot.style.top = `${posY}px`;
+
+  //       cursorOutline.animate(
+  //         { left: `${posX}px`, top: `${posY}px` },
+  //         { duration: 500, fill: "forwards" }
+  //       );
+  //     }
+  //   };
+
+  //   window.addEventListener("mousemove", handleMouseMove);
+
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
+
+  // Language Animation Logic
   useEffect(() => {
-    // Disable scrolling on page load
-    document.body.style.overflow = "hidden";
+    const interval = setInterval(() => {
+      setCurrentLangIndex((prevIndex) => {
+        if (prevIndex === languages.length - 1) {
+          setTimeout(() => {
+            // setBorderRadius("100% 15%");
+          }, 290);
 
-    // Reset scroll position to the top on page load
-    window.scrollTo(0, 0);
+          setTimeout(() => {
+            setShowAnimation(true);
+          }, 300);
 
-    if (currentLangIndex < languages.length - 1) {
-      const timeout = setTimeout(() => {
-        setCurrentLangIndex((prevIndex) => prevIndex + 1);
-      }, 170);
-      return () => clearTimeout(timeout);
-    } else {
-      const timeout = setTimeout(() => {
-        setShowAnimation(true);
-        // Enable scrolling after animation
-        document.body.style.overflow = "auto";
-      }, 1000);
-      return () => clearTimeout(timeout);
-    }
-  }, [currentLangIndex]);
+          clearInterval(interval);
+          return prevIndex;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, 120);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Disable Scroll During Animation
+  useEffect(() => {
+    document.body.style.overflow = showAnimation ? "auto" : "hidden";
+  }, [showAnimation]);
 
   return (
-    <>
+    <main className="min-h-screen text-[#d0d0c0]">
+      {/* Custom Cursor */}
+      {/* <div className="xl:inline hidden cursor-dot w-5 h-5 bg-white fixed rounded-full pointer-events-none"></div>
+      <div className="xl:inline hidden cursor-outline w-10 h-10 border border-gold fixed rounded-full pointer-events-none transition-all duration-75"></div> */}
+
       {/* Loading Screen */}
-      <section
-        className={`absolute z-[200] flex items-center justify-center gap-3 h-screen w-screen transition-all duration-1000 bg-black text-3xl text-[#d0d0c0] font-circular-web ${
-          showAnimation ? "-top-full" : "top-0"
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center transition-transform duration-[1500ms] ease-in-out ${
+          showAnimation ? "-translate-y-full" : "translate-y-0"
         }`}
+        style={{
+          zIndex: 100,
+          // borderBottomLeftRadius: borderRadius,
+          // borderBottomRightRadius: borderRadius,
+          // transitionProperty: "transform, border-radius",
+        }}
       >
-        <p>{languages[currentLangIndex]}</p>
-        <p>...</p>
-      </section>
+        <h1 className="text-5xl text-center tracking-wider animate-pulse">
+          • {languages[currentLangIndex]} •
+        </h1>
+      </div>
 
       {/* Main Content */}
-      <main
-        className="relative min-h-screen w-screen overflow-x-hidden"
-        onClick={toggleHover}
-      >
-        <NavBar hover={hover} setHover={setHover} />
-        <UglyHero />
-        <About />
-        <Features />
-        <Story />
-        <Contact />
-        <Footer />
-      </main>
-    </>
+      <NavBar />
+      <UglyHero />
+      <About />
+      <Features />
+      <Story />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
 
