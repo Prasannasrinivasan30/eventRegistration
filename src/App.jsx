@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import About from "./components/About";
 import UglyHero from "./components/UglyHero";
 import NavBar from "./components/Navbar";
@@ -5,7 +6,6 @@ import Features from "./components/Features";
 import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
 
 function App() {
   const [hover, setHover] = useState(false);
@@ -22,46 +22,52 @@ function App() {
   }
 
   useEffect(() => {
+    // Disable scrolling on page load
+    document.body.style.overflow = "hidden";
+
+    // Reset scroll position to the top on page load
+    window.scrollTo(0, 0);
+
     if (currentLangIndex < languages.length - 1) {
       const timeout = setTimeout(() => {
         setCurrentLangIndex((prevIndex) => prevIndex + 1);
       }, 170);
-      return () => clearTimeout(timeout); // Cleanup timeout
+      return () => clearTimeout(timeout);
     } else {
       const timeout = setTimeout(() => {
         setShowAnimation(true);
+        // Enable scrolling after animation
+        document.body.style.overflow = "auto";
       }, 1000);
-      return () => clearTimeout(timeout); // Cleanup timeout
+      return () => clearTimeout(timeout);
     }
   }, [currentLangIndex]);
 
   return (
     <>
-    <section
-        className={`bg-black h-screen w-screen absolute z-[100] text-[#d0d0c0] font-circular-web text-3xl flex gap-3 items-center justify-center transition-all duration-1000 ${
-          showAnimation ? "-top-[100%]" : "top-0"
+      {/* Loading Screen */}
+      <section
+        className={`absolute z-[200] flex items-center justify-center gap-3 h-screen w-screen transition-all duration-1000 bg-black text-3xl text-[#d0d0c0] font-circular-web ${
+          showAnimation ? "-top-full" : "top-0"
         }`}
       >
-        <p>
-          {languages[currentLangIndex]} 
-        </p>
-        <p>
-          ...
-        </p>
+        <p>{languages[currentLangIndex]}</p>
+        <p>...</p>
       </section>
-    <main
-      className="relative min-h-screen w-screen overflow-x-hidden "
-      onClick={toggleHover}
-    >
 
-      <NavBar hover={hover} setHover={setHover} />
-      <UglyHero />
-      <About />
-      <Features />
-      <Story />
-      <Contact />
-      <Footer />
-    </main>
+      {/* Main Content */}
+      <main
+        className="relative min-h-screen w-screen overflow-x-hidden"
+        onClick={toggleHover}
+      >
+        <NavBar hover={hover} setHover={setHover} />
+        <UglyHero />
+        <About />
+        <Features />
+        <Story />
+        <Contact />
+        <Footer />
+      </main>
     </>
   );
 }
