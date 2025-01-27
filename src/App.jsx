@@ -104,7 +104,7 @@ function App() {
       <UglyHero />
       <About />
       <Features />
-      <Story />
+      {/* <Story /> */}
       <Contact />
       <Footer />
     </main>
