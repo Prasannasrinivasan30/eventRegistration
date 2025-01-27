@@ -43,7 +43,7 @@ const Contact = () => {
             className="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
           />
 
-          <Button title="contact us" containerClass="mt-10 cursor-pointer" />
+          <Button link="videos/contact.mp4" title="contact us" containerClass="mt-10 cursor-pointer" />
         </div>
       </div>
       {/* <a className="text-right font-web-circular mr-2" href="https://www.linkedin.com/in/kkube">Developed by <span className="text-blue-500 "> Kishore Kumar K</span></a> */}
