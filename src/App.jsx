@@ -8,6 +8,8 @@ import Features from "./components/Features";
 // import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
+import { AiFillWeiboSquare } from "react-icons/ai";
 
 function App() {
   const languages = [
@@ -77,37 +79,64 @@ function App() {
   }, [showAnimation]);
 
   return (
-    <main className="min-h-screen text-[#d0d0c0]">
-      {/* Custom Cursor */}
-      {/* <div className="xl:inline hidden cursor-dot w-5 h-5 bg-white fixed rounded-full pointer-events-none"></div>
-      <div className="xl:inline hidden cursor-outline w-10 h-10 border border-gold fixed rounded-full pointer-events-none transition-all duration-75"></div> */}
-
-      {/* Loading Screen */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center transition-transform duration-[1500ms] ease-in-out ${
-          showAnimation ? "-translate-y-full" : "translate-y-0"
-        }`}
-        style={{
-          zIndex: 100,
-          // borderBottomLeftRadius: borderRadius,
-          // borderBottomRightRadius: borderRadius,
-          // transitionProperty: "transform, border-radius",
-        }}
-      >
-        <h1 className="text-5xl text-center tracking-wider animate-pulse">
-          • {languages[currentLangIndex]} •
-        </h1>
-      </div>
-
-      {/* Main Content */}
-      <NavBar />
-      <UglyHero />
-      <About />
-      <Features />
-      {/* <Story /> */}
-      <Contact />
-      <Footer />
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <>
+          <main className="min-h-screen text-[#d0d0c0]">
+          {/* Custom Cursor */}
+          {/* <div className="xl:inline hidden cursor-dot w-5 h-5 bg-white fixed rounded-full pointer-events-none"></div>
+          <div className="xl:inline hidden cursor-outline w-10 h-10 border border-gold fixed rounded-full pointer-events-none transition-all duration-75"></div> */}
+    
+          {/* Loading Screen */}
+          <div
+            className={`fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center transition-transform duration-[1500ms] ease-in-out ${
+              showAnimation ? "-translate-y-full" : "translate-y-0"
+            }`}
+            style={{
+              zIndex: 100,
+              // borderBottomLeftRadius: borderRadius,
+              // borderBottomRightRadius: borderRadius,
+              // transitionProperty: "transform, border-radius",
+            }}
+          >
+            <h1 className="text-5xl text-center tracking-wider animate-pulse">
+              • {languages[currentLangIndex]} •
+            </h1>
+          </div>
+    
+          {/* Main Content */}
+          <NavBar />
+          <UglyHero />
+          <About />
+          <Features />
+          {/* <Story /> */}
+          <Contact />
+          <Footer />
+        </main>
+        </>
+        }/>
+        <Route path="/about" element={
+          <>
+          <About />
+          <Footer/>
+          </>
+        }/>
+        <Route path="/events" element={
+          <>
+          < Features/>
+          <Footer/>
+          </>
+        }/>
+        <Route path="/contact" element={
+          <>
+          <Contact />
+          <Footer/>
+          </>
+        }/>
+        <Route />
+      </Routes>
+    </Router>
   );
 }
 

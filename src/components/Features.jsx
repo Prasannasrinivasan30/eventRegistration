@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -190,6 +191,7 @@ const Features = () => {
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+          <Link to="/about">
           <BentoCard
             src="videos/feature-2.mp4"
             title={
@@ -203,6 +205,7 @@ const Features = () => {
             isComingSoon
             link="https://docs.google.com/forms/d/e/1FAIpQLSe8O3JRIITp0e9_KjZcKhdx_zqkDJfhQoXZSliEhEEQJXyKWQ/viewform?usp=header"
           />
+          </Link>
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
@@ -217,6 +220,7 @@ const Features = () => {
             // description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
             isComingSoon
             link="https://docs.google.com/forms/d/e/1FAIpQLSdGVpALobqqKn"
+
           />
         </BentoTilt>
 
