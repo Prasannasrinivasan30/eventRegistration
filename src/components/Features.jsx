@@ -134,7 +134,7 @@ const Features = () => {
             className="text-justify text-xl list-disc pl-6"
           >
             <li>
-              Toprovide the needed resources and infrastructure and to establish a conducive ambience for the teaching-learning and research processes and to meet with the technological developments.
+              To provide the needed resources and infrastructure and to establish a conducive ambience for the teaching-learning and research processes and to meet with the technological developments.
             </li>
             <li>
               To create high quality professionals and entrepreneurs in the field of Electronics and Communication Engineering with the right attitude to serve the society with ethical values.

@@ -25,7 +25,7 @@ const Contact = () => {
         <div className="absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
           <ImageClipBox
             src="/img/logo.png"
-            clipClass="absolute md:scale-125"
+            clipClass="absolute md:scale-125 -top-[30px]"
           />
           {/* <ImageClipBox
             src="/img/swordman.webp"
