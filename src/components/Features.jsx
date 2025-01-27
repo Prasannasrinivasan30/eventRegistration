@@ -201,6 +201,7 @@ const Features = () => {
             }
             // description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
             isComingSoon
+            link="https://docs.google.com/forms/d/e/1FAIpQLSe8O3JRIITp0e9_KjZcKhdx_zqkDJfhQoXZSliEhEEQJXyKWQ/viewform?usp=header"
           />
         </BentoTilt>
 
@@ -215,6 +216,7 @@ const Features = () => {
             }
             // description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
             isComingSoon
+            link="https://docs.google.com/forms/d/e/1FAIpQLSdGVpALobqqKn"
           />
         </BentoTilt>
 
@@ -230,6 +232,7 @@ const Features = () => {
             }
             // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             isComingSoon
+            lin="https://docs.google.com/forms/d/e/1FAIpQLSdGllvvI3Qv6_chCTNXR14S1z0Qo8fPw3ngrLWxEs7cP-Y46g/viewform?usp=header"
           />
         </BentoTilt>
         {/* <BentoTilt className="bento-tilt_2">
