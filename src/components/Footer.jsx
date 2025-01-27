@@ -1,8 +1,8 @@
-import {FaYoutube, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import {FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 const socialLinks = [
   { href: "https://chat.whatsapp.com/CG1hCNq9TJy8YGxctyqFab", icon: <FaWhatsapp className="size-5" /> },
-  { href: "https://youtube.com", icon: <FaYoutube className="size-5"/> },
+  // { href: "https://youtube.com", icon: <FaYoutube className="size-5"/> },
   { href: "mailto:honeken@rmkec.ac.in", icon: <SiGmail className="size-5"/> },
   { href: "https://Instagram.com", icon: <FaInstagram className="size-5"/> },
 ];

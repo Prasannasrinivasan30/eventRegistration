@@ -21,12 +21,8 @@ const Contact = () => {
             clipClass="contact-clip-path-2 lg:translate-y-40 translate-y-60"
           /> */}
         </div>
-
         <div className="absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
-          <ImageClipBox
-            src="/img/logo.png"
-            clipClass="absolute md:scale-125 -top-[30px]"
-          />
+
           {/* <ImageClipBox
             src="/img/swordman.webp"
             clipClass="sword-man-clip-path md:scale-125"
@@ -34,7 +30,11 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          <p className="mb-10 font-general text-[1.2rem] uppercase">
+           <ImageClipBox
+              src="/img/logo.png"
+              clipClass="absolute md:scale-125 -top-[0px]"
+            />
+          <p className="mb-10 mt-[20rem] font-general text-[1.2rem] uppercase">
             For Queries?
           </p>
 
