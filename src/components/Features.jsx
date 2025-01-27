@@ -165,7 +165,7 @@ const Features = () => {
       </div>
       <img src="img/Rules.jpg" alt="" className="h-auto w-auto p-12"/>
       <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32">
+      <div className="px-5 py-32 text-9xl">
         <p className="font-circular-web text-xl text-blue-50">
             Following for the exciting events!
         </p>
@@ -232,7 +232,7 @@ const Features = () => {
             }
             // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             isComingSoon
-            lin="https://docs.google.com/forms/d/e/1FAIpQLSdGllvvI3Qv6_chCTNXR14S1z0Qo8fPw3ngrLWxEs7cP-Y46g/viewform?usp=header"
+            link="https://docs.google.com/forms/d/e/1FAIpQLSdGllvvI3Qv6_chCTNXR14S1z0Qo8fPw3ngrLWxEs7cP-Y46g/viewform?usp=header"
           />
         </BentoTilt>
         {/* <BentoTilt className="bento-tilt_2">
