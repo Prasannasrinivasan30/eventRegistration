@@ -166,7 +166,7 @@ const Features = () => {
       <img src="img/Rules.jpg" alt="" className="h-auto w-auto p-12"/>
       <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
-        <p className="font-circular-web text-lg text-blue-50">
+        <p className="font-circular-web text-xl text-blue-50">
             Following for the exciting events!
         </p>
         <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
