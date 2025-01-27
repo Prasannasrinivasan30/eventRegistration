@@ -32,9 +32,9 @@ const Contact = () => {
         <div className="flex flex-col items-center text-center">
            <ImageClipBox
               src="/img/logo.png"
-              clipClass="absolute md:scale-125 -top-[0px]"
+              clipClass="absolute md:scale-125 -top-[0px] top-20 lg:w-80"
             />
-          <p className="mb-10 mt-[20rem] font-general text-[1.2rem] uppercase">
+          <p className="mb-10 mt-[22rem] font-general text-[1.2rem] uppercase">
             For Queries?
           </p>
 
