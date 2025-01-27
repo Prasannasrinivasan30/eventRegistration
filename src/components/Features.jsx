@@ -165,11 +165,11 @@ const Features = () => {
       </div>
       <img src="img/Rules.jpg" alt="" className="h-auto w-auto p-12"/>
       <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32 text-9xl">
-        <p className="font-circular-web text-xl text-blue-50">
+      <div className="px-5 py-32 ">
+        <p className="font-circular-web text-3xl text-blue-50">
             Following for the exciting events!
         </p>
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
+        <p className="max-w-md font-circular-web text-2xl text-blue-50 opacity-50">
           Discover the symposium, where a diverse range of products come together to create a unique and interconnected experience in your world.
         </p>
       </div>
