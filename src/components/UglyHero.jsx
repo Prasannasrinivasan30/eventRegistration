@@ -87,6 +87,7 @@ const UglyHero = () => {
             </p>
             <div className="flex gap-2">
               <Button
+                link="https://bitly.cx/bKGRP"
                 id="watch-trailer"
                 title="Register now"
                 leftIcon={<TiLocationArrow />}

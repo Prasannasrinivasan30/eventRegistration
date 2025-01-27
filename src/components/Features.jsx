@@ -163,7 +163,7 @@ const Features = () => {
           </ul>
         </div>
       </div>
-
+      <img src="img/Rules.jpg" alt="" className="h-auto w-auto p-12"/>
       <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         <p className="font-circular-web text-lg text-blue-50">
