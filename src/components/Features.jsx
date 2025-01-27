@@ -42,7 +42,7 @@ export const BentoTilt = ({ children, className = "" }) => {
   );
 };
 
-export const BentoCard = ({ src, title, description, isComingSoon }) => {
+export const BentoCard = ({ src, title, description, isComingSoon,link }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoverOpacity, setHoverOpacity] = useState(0);
   const hoverButtonRef = useRef(null);
@@ -92,8 +92,8 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
                 background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #656fe288, #00000026)`,
               }}
             />
-            <TiLocationArrow className="relative z-20" />
-            <p className="relative z-20">Register</p>
+            <TiLocationArrow className="relative z-20 text-white" />
+            <a className="relative z-20 text-white" href={link}>Register</a>
           </div>
         )}
       </div>
@@ -184,6 +184,7 @@ const Features = () => {
           }
           // description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
           isComingSoon
+          link="https://docs.google.com/forms/d/e/1FAIpQLSe8xVvli13AiUlFe0GLVi_BBWBeRx3wGfwn-pQmgVjGgKxlpQ/viewform"
         />
       </BentoTilt>
 
