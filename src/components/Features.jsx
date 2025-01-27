@@ -126,7 +126,7 @@ const Features = () => {
 
   return (
     <section className="bg-black pb-52" >
-      <div className="text-white text-center font-robert-medium text-4xl pt-40 lg:flex gap-10 mx-10">
+      <div className="text-white text-center font-robert-medium text-4xl pt-40 lg:flex lg:flex-row-reverse  gap-10 mx-10">
         <div>
           <h1 ref={(el) => (textRefs.current[0] = el)}>MISSION</h1>
           <ul

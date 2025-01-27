@@ -5,7 +5,7 @@ import About from "./components/About";
 import UglyHero from "./components/UglyHero";
 import NavBar from "./components/Navbar";
 import Features from "./components/Features";
-import Story from "./components/Story";
+// import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
