@@ -10,6 +10,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import { AiFillWeiboSquare } from "react-icons/ai";
+import TechThesis from "./components/TechThesis";
+import TechTrek from "./components/TechTrek";
 
 function App() {
   const languages = [
@@ -119,23 +121,34 @@ function App() {
         }/>
         <Route path="/about" element={
           <>
+          <NavBar />
           <About />
           <Footer/>
           </>
         }/>
         <Route path="/events" element={
           <>
+          <NavBar />
           < Features/>
           <Footer/>
           </>
         }/>
         <Route path="/contact" element={
           <>
+          <NavBar />
           <Contact />
           <Footer/>
           </>
         }/>
+        <Route path='/events/techthesis' element={
+          <TechThesis />
+        }/>
         <Route />
+        <Route path='/events/techtrek' element={
+          <TechTrek />
+        }/>
+        <Route />
+
       </Routes>
     </Router>
   );
