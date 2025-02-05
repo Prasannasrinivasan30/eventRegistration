@@ -174,9 +174,9 @@ const Features = () => {
         </p>
       </div>
       <br id="events"/>
-      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]" >
+      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[75vh]" >
         <BentoCard
-          src="videos/feature-1.mp4"
+          src="videos/Tech_Thesis_video.mp4"
           title={
             <>
               <b>Tech Thesis<br />Paper presentation</b> 
@@ -188,16 +188,18 @@ const Features = () => {
         />
       </BentoTilt>
 
-      <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
+      <div className="grid h-[110vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
-            src="videos/feature-2.mp4"
+            src="videos/Ideathon_video.mp4"
             title={
               <>
-                Id<b>e</b>ath<b>o</b>n 
-                <br />
-                Project Presentation
               </>
+              // <>
+              //   Id<b>e</b>ath<b>o</b>n 
+              //   <br />
+              //   Project Presentation
+              // </>
             }
             // description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
             isComingSoon
