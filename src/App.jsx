@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useState } from "react";
 import About from "./components/About";
 import UglyHero from "./components/UglyHero";
@@ -50,7 +48,7 @@ function App() {
   // }, []);
 
   // Language Animation Logic
-  const [isAudioPlaying, setIsAudioPlaying]=useState(false);
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentLangIndex((prevIndex) => {
@@ -84,7 +82,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-          <main className="min-h-screen text-[#d0d0c0]" onClick={()=>setIsAudioPlaying(true)}>
+          <main className="min-h-screen text-[#d0d0c0]">
           {/* Custom Cursor */}
           {/* <div className="xl:inline hidden cursor-dot w-5 h-5 bg-white fixed rounded-full pointer-events-none"></div>
           <div className="xl:inline hidden cursor-outline w-10 h-10 border border-gold fixed rounded-full pointer-events-none transition-all duration-75"></div> */}
@@ -107,7 +105,7 @@ function App() {
           </div>
     
           {/* Main Content */}
-          <NavBar isAudioPlaying={isAudioPlaying} setIsAudioPlaying={setIsAudioPlaying} />
+          <NavBar />
           <UglyHero />
           <About />
           <Features />
