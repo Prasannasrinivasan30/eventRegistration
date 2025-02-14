@@ -3,14 +3,13 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
-
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
-const navItems = ["Main","Events","Contact","Developer"];
+const navItems = ["About","Events","Contact"];
 
-const NavBar = ({hover}) => {
+const NavBar = ({hover,isAudioPlaying,setIsAudioPlaying}) => {
   // State for toggling audio and visual indicator
-  const [isAudioPlaying, setIsAudioPlaying]=useState(false);
   useEffect(()=>{
     if(hover){
       setIsAudioPlaying(true)
@@ -83,7 +82,7 @@ const NavBar = ({hover}) => {
             <Button
             link="https://maps.app.goo.gl/9nZRZWoZEKBZESRX7"
               id="product-button"
-              title="Avenue"
+              title="Venue"
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
             />
@@ -93,13 +92,13 @@ const NavBar = ({hover}) => {
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={`#${item.toLowerCase()}`}
+                  to={`/${item.toLowerCase()}`} 
                   className="nav-hover-btn"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
 
