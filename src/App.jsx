@@ -112,7 +112,7 @@ function App() {
           <About />
           <Features />
           {/* <Story /> */}
-          <Contact />
+          {/* <Contact /> */}
           <Footer />
         </main>
         </>
