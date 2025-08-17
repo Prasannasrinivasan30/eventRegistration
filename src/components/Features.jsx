@@ -127,49 +127,11 @@ const Features = () => {
 
   return (
     <section className="bg-black pb-52" >
-      <div className="text-white text-center font-robert-medium text-4xl pt-40 lg:flex lg:flex-row-reverse  gap-10 mx-10">
-        <div>
-          <h1 ref={(el) => (textRefs.current[0] = el)}>MISSION</h1>
-          <ul
-            ref={(el) => (textRefs.current[1] = el)}
-            className="text-justify text-xl list-disc pl-6"
-          >
-            <li>
-              To provide the needed resources and infrastructure and to establish a conducive ambience for the teaching-learning and research processes and to meet with the technological developments.
-            </li>
-            <li>
-              To create high quality professionals and entrepreneurs in the field of Electronics and Communication Engineering with the right attitude to serve the society with ethical values.
-            </li>
-            <li>
-              To modernize the laboratories on par with industry standards and to collaborate with them to improve the skill set of the students for providing innovative solutions to the industry.
-            </li>
-          </ul>
-        </div>
-        <img src="img/RMKlogo.png" alt="" className="hidden lg:block" />
-        <div className=" lg:hidden flex items-center justify-center">
-          <img src="img/RMKlogo.png" alt=""  />
-        </div>
-        <div>
-          <h1 ref={(el) => (textRefs.current[2] = el)}>VISION</h1>
-          <ul
-            ref={(el) => (textRefs.current[3] = el)}
-            className="text-justify text-xl list-disc pl-6"
-          >
-            <li>
-              To be one of the most sought after Centres of Excellence in the field of Electronics and Communication Engineering by providing high quality education.
-            </li>
-            <li>
-              To mould the students to compete internationally and to become excellent researchers and innovators who can provide solution to societal issues.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <img src="img/Rules.jpg" alt="" className="h-auto w-auto p-12"/>
       <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32 ">
         <p className="font-circular-web text-3xl text-blue-50">
             Following for the exciting events!
-        </p>
+        </p>    
         <p className="max-w-md font-circular-web text-2xl text-blue-50 opacity-50">
           Discover the symposium, where a diverse range of products come together to create a unique and interconnected experience in your world.
         </p>
@@ -185,7 +147,7 @@ const Features = () => {
           }
           // description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
           isComingSoon
-          link="https://docs.google.com/forms/d/e/1FAIpQLSe8xVvli13AiUlFe0GLVi_BBWBeRx3wGfwn-pQmgVjGgKxlpQ/viewform"
+          link="https://forms.gle/KCyAWMrp14o4nMg3A"
         />
       </BentoTilt>
 
@@ -205,7 +167,7 @@ const Features = () => {
             }
             // description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
             isComingSoon
-            link="https://docs.google.com/forms/d/e/1FAIpQLSe8O3JRIITp0e9_KjZcKhdx_zqkDJfhQoXZSliEhEEQJXyKWQ/viewform?usp=header"
+            link="https://forms.gle/KCyAWMrp14o4nMg3A"
           />
           </Link>
         </BentoTilt>
@@ -221,7 +183,7 @@ const Features = () => {
             }
             // description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
             isComingSoon
-            link="https://docs.google.com/forms/d/e/1FAIpQLSdGVpALobqqKn"
+            link="https://forms.gle/KCyAWMrp14o4nMg3A"
 
           />
         </BentoTilt>
@@ -231,14 +193,14 @@ const Features = () => {
             src="videos/feature-4.mp4"
             title={
               <>
-                Robo Trail<br/> Blaze <br></br>
-                <p className="text-xl">line following robot</p>
+                Bob The<br/> Debugger<br></br>
+                <p className="text-xl">Debugging </p>
                 <p className="text-xl">Event</p>
               </>
             }
             // description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             isComingSoon
-            link="https://docs.google.com/forms/d/e/1FAIpQLSdGllvvI3Qv6_chCTNXR14S1z0Qo8fPw3ngrLWxEs7cP-Y46g/viewform?usp=header"
+            link="https://forms.gle/KCyAWMrp14o4nMg3A"
           />
         </BentoTilt>
         {/* <BentoTilt className="bento-tilt_2">

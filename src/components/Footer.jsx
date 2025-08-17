@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="w-screen bg-[#5542ff] py-6 text-black">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
         <p className="text-center text-sm font-medium md:text-left">
-          © R.M.K. 2025. All rights reserved
+          © C.A.H.C.E.T 2025. All rights reserved
         </p>
 
         <div className="flex justify-center gap-4 pr-10 md:justify-start">
@@ -29,12 +29,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <a
-          href="#rules"
-          className="text-center text-sm font-medium hover:underline md:text-right"
-        >
-          Rules and Regulation
-        </a>
+        
       </div>
     </footer>
   );
